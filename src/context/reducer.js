@@ -4,13 +4,19 @@ export const reducer = (state, action) => {
         return{
             ...state,
             data: action.payload,
-            filteredData: action.payload
+            filteredData: action.payload,
+            searchData: action.payload
         }
     case "UPDATE":
         return{
             ...state,
             
             filteredData: action.payload
+        }
+    case "SEARCH":
+        return{
+            ...state,
+            searchData: action.payload
         }
     
 

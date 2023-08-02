@@ -8,6 +8,7 @@ import {booksData} from "../data"
 const initialValue = {
    data: [],
    filteredData: [],
+   searchData:[]
 
     
 }

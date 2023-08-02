@@ -14,7 +14,11 @@ export const Home = () => {
         <div>
            <div className="currentRead">
             <button onClick={() => navigate("/search")}>Search Books</button>
+            <div class="headingBox">
             <h1>Currently Reading</h1>
+            </div>
+
+           
             <div className="dataContainer">
             {
                 state.filteredData.filter(item => item.currentlyReading === true).map(item => (
@@ -28,7 +32,9 @@ export const Home = () => {
             
            </div>
            <div className="wantRead">
-           <h1>Want To Read</h1>
+           <div class="headingBox">
+            <h1>Want To Read</h1>
+            </div>
            <div className="dataContainer">
            {
                 state.filteredData.filter(item => item.wantToRead === true).map(item => (
@@ -42,7 +48,9 @@ export const Home = () => {
            
            </div>
            <div className="alreadyRead">
-           <h1>Already Read</h1>
+           <div class="headingBox">
+            <h1>Already Read</h1>
+            </div>
            <div className="dataContainer">
            {
                 state.filteredData.filter(item => item.alreadyRead === true).map(item => (

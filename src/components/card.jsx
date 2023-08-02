@@ -48,11 +48,11 @@ export const BookCard = ({item}) => {
                
                onChange={(e) => updateReadingStatus(item.bookName, e.target.value)}
              ><option disabled  >Move to..</option>
-
+                <option value="none">None</option>
                <option value="currentlyReading">{item.currentlyReading ? "✓" : " "}Currently Reading</option>
                <option value="alreadyRead">{item.alreadyRead ? "✓" : " "}Already Read</option>
                <option value="wantToRead">{item.wantToRead ? "✓" : " "}Want To Read</option>
-               <option value="none">None</option>
+               
              </select>
         </div>
       </div>

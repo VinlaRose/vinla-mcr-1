@@ -5,7 +5,7 @@ import "../Home/Home.css"
 
 export const Search = () => {
 
-    const {state} = useContext(DataContext);
+    const {state,dispatch} = useContext(DataContext);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredBooks, setFilteredBooks] = useState(state.filteredData);
 
@@ -14,12 +14,14 @@ export const Search = () => {
         setSearchTerm(searchValue);
     
         if (searchValue.trim() === '') {
-          setFilteredBooks(state.filteredData);
+          
+          dispatch({type: "SEARCH" , payload: state.data})
         } else {
-          const filtered = state.filteredData.filter((book) =>
+          const filtered = state.data.filter((book) =>
             book.bookName.toLowerCase().includes(searchValue.toLowerCase())
           );
           setFilteredBooks(filtered);
+          dispatch({type: "SEARCH" , payload: filteredBooks})
         }
       };
   
@@ -43,7 +45,7 @@ export const Search = () => {
            
            
             {
-                filteredBooks.map(item => (
+                state.searchData.map(item => (
                     <div key={item.bookName}>
                         <BookCard item={item}/>
                     </div>

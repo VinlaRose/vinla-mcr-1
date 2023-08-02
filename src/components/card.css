@@ -37,7 +37,7 @@
   .dropdown-button {
     width: 40px;
     height: 40px;
-    background-color: #007bff;
+    background-color: rgb(64, 156, 64);
     border-radius: 50%;
     position: absolute;
     bottom: -12px;
@@ -74,5 +74,23 @@
 
   option{
     color: black;
+    width: 100px;
+    border-radius: 5px;
+  }
+
+  select option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+  select option:hover {
+    background-color: #f2f2f2;
+  }
+  
+
+  select option:checked {
+    background-color: rgb(64, 156, 64); /* Change the color for the selected option */
+    color: #fff; /* Change the text color for the selected option */
   }
 
