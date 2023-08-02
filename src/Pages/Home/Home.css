@@ -1,0 +1,41 @@
+.dataContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  /* Style for the input container */
+  .input-container {
+    position: relative;
+    width: 100%;
+    
+    border-bottom: 2px solid #ccc; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* Style for the input field */
+  .input-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-left: 50px;
+    border: none;
+    font-size: 30px;
+    outline: none;
+  }
+  
+  /* Style for the back arrow icon */
+  .input-container .back-arrow {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    color: grey;
+  }
+  
+  /* Optional: Additional hover effect for the back arrow */
+  .input-container .back-arrow:hover {
+    color: black; /* Change the color on hover as desired */
+  }
+  
+  
